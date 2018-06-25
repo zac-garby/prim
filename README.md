@@ -35,3 +35,26 @@ To simplify it slightly:
      - `threadCount`, the number of threads which will be made to process the MST
  - Takes an absolute eternity to generate minimum spanning trees.
    - This is due to the nature of Prim's algorithm. It will run really fast towards the beginning of the program, and towards the end, but extremely slowly in the middle. If you want to know why, think about Prim's algorithm and how it works and I'm sure you'll figure it out.
+
+## Usage:
+
+First, you'll need to get the source:
+
+```
+$ go get -u github.com/zac-garby/prim
+```
+
+If you just want to generate an image without changing any of the settings:
+
+```
+$ prim && open out.png
+```
+
+Or you could edit the source file (specifically, look at the variables right at the top):
+
+```
+$ cd $GOPATH/src/github.com/zac-garby/prim
+$ <edit the file>
+$ go install
+$ prim && open out.png
+```
